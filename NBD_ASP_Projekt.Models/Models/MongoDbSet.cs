@@ -8,7 +8,7 @@ namespace NBD_ASP_Projekt.Models.Models
 {
 	public class MongoDbSet
 	{
-        public string ConnectionString { get; set; }
-        public string DatabaseName { get; set; }
+        public string ConnectionString { get; set; } = null!;
+        public string DatabaseName { get; set; } = null!;
     }
 }
