@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using NBD_ASP_Projekt.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("connectionString.json");
 builder.Services.AddDbContext<ComputerContext>(options =>
 	options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
