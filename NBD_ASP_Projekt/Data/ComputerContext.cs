@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace NBD_ASP_Projekt.Data
 {
-	public class ComputerContext : IdentityDbContext
+	public class ComputerContext 
 	{
 		IMongoDatabase database;
 		IGridFSBucket gridFS;
@@ -72,4 +72,4 @@ namespace NBD_ASP_Projekt.Data
 		}
 	}
 }
-}
+
