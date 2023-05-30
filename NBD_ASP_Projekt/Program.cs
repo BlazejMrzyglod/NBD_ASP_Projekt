@@ -6,13 +6,12 @@ using NBD_ASP_Projekt.Models.Models;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.Configure<MongoDbSet>(builder.Configuration.GetSection("MongoDb"));
-/*var connectionString = builder.Configuration.GetConnectionString("MongoDb");
-builder.Services.AddDbContext<ComputerContext>(options =>
-	options.UseSqlServer(connectionString));*/
+//var connectionString = builder.Configuration.GetConnectionString("MongoDb");
+//builder.Services.AddDbContext<ComputerContext>();
+builder.Services.AddSingleton<ComputerContext>();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-/*builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-	.AddEntityFrameworkStores<ComputerContext>();*/
+//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 var app = builder.Build();
