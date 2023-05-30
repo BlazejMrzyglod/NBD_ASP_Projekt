@@ -1,14 +1,10 @@
-﻿using Microsoft.Extensions.Options;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver.GridFS;
 using MongoDB.Driver;
 using NBD_ASP_Projekt.Models.Models;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using static System.Net.Mime.MediaTypeNames;
-using System.Xml.Linq;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
-namespace NBD_ASP_Projekt.Data
+namespace NBD_ASP_Projekt.Services
 {
 	public class ComputerContext 
 	{

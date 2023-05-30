@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using NBD_ASP_Projekt.Data;
 using NBD_ASP_Projekt.Models.Models;
+using NBD_ASP_Projekt.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.

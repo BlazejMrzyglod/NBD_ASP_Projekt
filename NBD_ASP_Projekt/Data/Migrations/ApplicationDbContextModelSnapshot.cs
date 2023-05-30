@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NBD_ASP_Projekt.Data;
+using NBD_ASP_Projekt.Services;
 using System;
 
 namespace NBD_ASP_Projekt.Data.Migrations
 {
-	[DbContext(typeof(ApplicationDbContext))]
+	[DbContext(typeof(ComputerContext))]
 	partial class ApplicationDbContextModelSnapshot : ModelSnapshot
 	{
 		protected override void BuildModel(ModelBuilder modelBuilder)
