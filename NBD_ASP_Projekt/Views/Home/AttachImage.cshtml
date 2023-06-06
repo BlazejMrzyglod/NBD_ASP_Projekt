@@ -16,5 +16,8 @@
 	<div class="form-group">
 		<input type="submit" value="Dodaj zdjęcie" class="btn btn-primary" />
 	</div>
-	<img src="~/Home/GetImage/@Model.ImageId" asp-append-version="true">
+	@if (Model.ImageId != null)
+	{
+		<img src="~/Home/GetImage/@Model.ImageId" asp-append-version="true">
+	}
 </form>
