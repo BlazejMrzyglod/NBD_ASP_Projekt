@@ -82,7 +82,8 @@ namespace Lab8.Controllers
 
         public async Task<IActionResult> GetImage(string id)
         {
-            var image = await db.GetImage(id);
+			Computers computer = await db.GetComputer(id);
+			var image = await db.GetImage(computer.ImageId);
             if (image == null) return Error();
             return File(image, "image/png");
         }
