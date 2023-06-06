@@ -21,6 +21,7 @@
 		<th>Model</th>
 		<th>Year</th>
 		<th>Option</th>
+		<th>Image</th>
 	</tr>
 	@foreach (var computer in Model.Computers)
 	{
@@ -32,6 +33,12 @@
 				@Html.ActionLink("Delete","Delete",new {id=computer.Id})|
 				@Html.ActionLink("Add image","AttachImage",new {id=computer.Id})
 			</td>
+			@if (computer.ImageId != null)
+			{
+				<td>
+					<img src="~/Home/GetImage/@computer.ImageId" height="40" width="60" asp-append-version="true">
+				</td>
+			}
 		</tr>
 	}
 </table>
