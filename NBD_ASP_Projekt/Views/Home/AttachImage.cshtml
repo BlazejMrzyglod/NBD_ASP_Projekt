@@ -1,11 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Attach image";
+	ViewData["Title"] = "Attach image";
 }
 
 @model NBD_ASP_Projekt.Models.Models.Computers
 
 <h1>Dodaj obrazek</h1>
 
-<span>Nazwa komputera</span>
+<p>Nazwa komputera</p>
 @Html.DisplayFor(model =>model.Name)
-<span>Zdjęcie</span>
+<p>Zdjęcie</p>
+<form asp-action="AttachImage" enctype="multipart/form-data">
+	<div class="form-group">
+		<input type="file" name="uploadedFile" id="uploadedFile" />
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Dodaj zdjęcie" class="btn btn-primary" />
+	</div>
+	<asp:I
+</form>
